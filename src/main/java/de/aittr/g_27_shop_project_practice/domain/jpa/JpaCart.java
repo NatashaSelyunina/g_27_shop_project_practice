@@ -49,6 +49,10 @@ public class JpaCart implements Cart {
 //        this.customer = entity;
 //    }
 
+    public int getCustomerById(JpaCustomer customer) {
+        int customerId = customer.getId();
+        return customerId;
+    }
 
     public JpaCustomer getCustomer() {
         return customer;

@@ -1,0 +1,37 @@
+package de.aittr.g_27_shop_project_practice.services.mapping;
+
+import de.aittr.g_27_shop_project_practice.domain.dto.CartDto;
+import de.aittr.g_27_shop_project_practice.domain.dto.ProductDto;
+import de.aittr.g_27_shop_project_practice.domain.interfaces.Cart;
+import de.aittr.g_27_shop_project_practice.domain.jpa.JpaCart;
+import de.aittr.g_27_shop_project_practice.domain.jpa.JpaCustomer;
+import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
+
+import java.util.List;
+
+public class CartMappingService {
+    private ProductMappingService mappingService;
+
+    public CartMappingService(ProductMappingService mappingService) {
+        this.mappingService = mappingService;
+    }
+
+    public CartDto mapEntityToDto(Cart cart) {
+        int id = cart.getId();
+        List<ProductDto> products = cart.getProducts()
+                .stream()
+                .map(product -> mappingService.mapEntityToDto(product))
+                .toList();
+        return new CartDto(id, products);
+    }
+
+    public JpaCart mapDtoToEntity(CartDto dto) {
+        int id = dto.getId();
+        List<JpaProduct> products = dto.getProducts()
+                .stream()
+                .map(productDto -> mappingService.mapDtoToEntity(productDto))
+                .toList();
+        JpaCustomer customer;
+        return null;
+    }
+}
