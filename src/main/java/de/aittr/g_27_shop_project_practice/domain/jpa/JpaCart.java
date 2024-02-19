@@ -1,7 +1,6 @@
 package de.aittr.g_27_shop_project_practice.domain.jpa;
 
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Cart;
-import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Product;
 import jakarta.persistence.*;
 
