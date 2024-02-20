@@ -4,6 +4,7 @@ import de.aittr.g_27_shop_project_practice.domain.dto.CustomerDto;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import de.aittr.g_27_shop_project_practice.repositories.interfaces.CustomerRepository;
 import de.aittr.g_27_shop_project_practice.services.interfaces.CustomerService;
+import de.aittr.g_27_shop_project_practice.services.mapping.CustomerMappingService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +13,11 @@ import java.util.NoSuchElementException;
 @Service
 public class CommonCustomerService implements CustomerService {
     private CustomerRepository repository;
+    private CustomerMappingService mappingService;
 
-    public CommonCustomerService(CustomerRepository repository) {
+    public CommonCustomerService(CustomerRepository repository, CustomerMappingService mappingService) {
         this.repository = repository;
+        this.mappingService = mappingService;
     }
 
     @Override
@@ -27,26 +30,28 @@ public class CommonCustomerService implements CustomerService {
             throw new IllegalArgumentException("Имя сохраняемого покупателя не может быть пустым");
         }
 
-        return repository.save(customer);
+        Customer entity = mappingService.mapDtoToCommonCustomer(customer);
+        entity = repository.save(entity);
+        return mappingService.mapEntityToDto(entity);
     }
 
     @Override
-    public List<Customer> getAllActiveCustomers() {
+    public List<CustomerDto> getAllActiveCustomers() {
         List<Customer> customers = repository.getAll();
 
         if (customers.isEmpty()) {
             throw new NoSuchElementException("В базе данных нет покупателей");
         }
-        return customers;
+        return customers.stream().map(x -> mappingService.mapEntityToDto(x)).toList();
     }
 
     @Override
-    public Customer getActiveCustomerById(int id) {
+    public CustomerDto getActiveCustomerById(int id) {
         return null;
     }
 
     @Override
-    public void update(Customer customer) {
+    public void update(CustomerDto customer) {
 
     }
 
