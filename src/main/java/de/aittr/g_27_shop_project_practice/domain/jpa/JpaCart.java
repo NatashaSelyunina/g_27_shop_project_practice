@@ -11,13 +11,16 @@ import java.util.Objects;
 @Entity
 @Table(name = "cart")
 public class JpaCart implements Cart {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+
     @OneToOne
     @JoinColumn(name = "customer_id")
     private JpaCustomer customer;
+
     @ManyToMany
     @JoinTable(
             name = "cart_product",
@@ -25,6 +28,14 @@ public class JpaCart implements Cart {
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private List<JpaProduct> products;
+
+    public JpaCart() {
+    }
+
+    public JpaCart(int id, List<JpaProduct> products) {
+        this.id = id;
+        this.products = products;
+    }
 
     @Override
     public int getId() {
@@ -40,7 +51,7 @@ public class JpaCart implements Cart {
 //        return customer;
 //    }
 //
-//    public void setCustomer(Customer customer) {
+//    public void setCustomer(JpaCustomer customer) {
 //        JpaCustomer entity = new JpaCustomer();
 //        entity.setId(customer.getId());
 //        entity.setName(customer.getName());
@@ -48,11 +59,6 @@ public class JpaCart implements Cart {
 //        entity.setCart(customer.getCart());
 //        this.customer = entity;
 //    }
-
-    public int getCustomerById(JpaCustomer customer) {
-        int customerId = customer.getId();
-        return customerId;
-    }
 
     public JpaCustomer getCustomer() {
         return customer;
@@ -70,12 +76,12 @@ public class JpaCart implements Cart {
     @Override
     public void setProducts(List<Product> products) {
         this.products = products.stream().map(x -> {
-        JpaProduct entity = new JpaProduct();
-        entity.setId(x.getId());
-        entity.setName(x.getName());
-        entity.setActive(x.isActive());
-        entity.setPrice(x.getPrice());
-        return entity;
+            JpaProduct entity = new JpaProduct();
+            entity.setId(x.getId());
+            entity.setName(x.getName());
+            entity.setActive(x.isActive());
+            entity.setPrice(x.getPrice());
+            return entity;
         }).toList();
     }
 

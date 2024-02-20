@@ -1,5 +1,6 @@
 package de.aittr.g_27_shop_project_practice.services.jdbc;
 
+import de.aittr.g_27_shop_project_practice.domain.dto.CustomerDto;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import de.aittr.g_27_shop_project_practice.repositories.interfaces.CustomerRepository;
 import de.aittr.g_27_shop_project_practice.services.interfaces.CustomerService;
@@ -17,7 +18,7 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
-    public Customer save(Customer customer) {
+    public CustomerDto save(CustomerDto customer) {
         if (customer == null) {
             throw new IllegalArgumentException("Сохраняемый покупатель не может быть null");
         }

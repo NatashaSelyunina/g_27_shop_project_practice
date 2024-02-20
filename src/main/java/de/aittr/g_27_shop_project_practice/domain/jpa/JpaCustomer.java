@@ -20,6 +20,13 @@ public class JpaCustomer implements Customer {
     @OneToOne(mappedBy = "customer")
     private JpaCart cart;
 
+    public JpaCustomer(int id, String name, boolean isActive, JpaCart cart) {
+        this.id = id;
+        this.name = name;
+        this.isActive = isActive;
+        this.cart = cart;
+    }
+
     @Override
     public int getId() {
         return id;
