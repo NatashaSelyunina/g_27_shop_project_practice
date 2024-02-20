@@ -73,13 +73,18 @@ public class JpaProductService implements ProductService {
     }
 
     @Override
+    @Transactional
     public void deleteById(int id) {
-
+        JpaProduct product = repository.findById(id).orElse(null);
+        if (product != null) {
+            repository.deleteById(id);
+        }
     }
 
     @Override
+    @Transactional
     public void deleteByName(String name) {
-
+        repository.deleteByName(name);
     }
 
     @Override
@@ -94,16 +99,27 @@ public class JpaProductService implements ProductService {
 
     @Override
     public int getActiveProductsCount() {
-        return 0;
+        return getAllActiveProducts().size();
     }
 
     @Override
     public double getActiveProductsTotalCost() {
-        return 0;
+         double totalPrice = repository.findAll()
+                .stream()
+                .filter(x -> x.isActive())
+                .mapToDouble(x -> x.getPrice())
+                .sum();
+         return totalPrice;
     }
 
     @Override
     public double getActiveProductsAveragePrice() {
-        return 0;
+        double averagePrice = repository.findAll()
+                .stream()
+                .filter(x -> x.isActive())
+                .mapToDouble(x -> x.getPrice())
+                .average()
+                .orElse(0);
+        return averagePrice;
     }
 }

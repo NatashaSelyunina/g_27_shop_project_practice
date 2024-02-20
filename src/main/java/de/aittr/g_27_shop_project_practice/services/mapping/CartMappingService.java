@@ -7,9 +7,10 @@ import de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart;
 import de.aittr.g_27_shop_project_practice.domain.jdbc.CommonProduct;
 import de.aittr.g_27_shop_project_practice.domain.jpa.JpaCart;
 import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CartMappingService {
     private ProductMappingService mappingService;
 

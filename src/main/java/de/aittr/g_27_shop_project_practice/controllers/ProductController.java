@@ -44,6 +44,16 @@ public class ProductController {
         service.restoreById(id);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteById(@PathVariable int id) {
+        service.deleteById(id);
+    }
+
+    @DeleteMapping("/name/{name}")
+    public void deleteByName(@Valid @PathVariable String name) {
+        service.deleteByName(name);
+    }
+
     // 1 способ - написание метода-хэндлера в контроллере.
     // Минус - когда требуется одинаковая обработка ошибок,
     // такой хэндлер придется написать в каждом контроллере.

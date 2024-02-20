@@ -1,5 +1,6 @@
 package de.aittr.g_27_shop_project_practice.controllers;
 
+import de.aittr.g_27_shop_project_practice.domain.dto.CustomerDto;
 import de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCustomer;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import de.aittr.g_27_shop_project_practice.services.interfaces.CustomerService;
@@ -17,12 +18,12 @@ public class CustomerController {
     }
 
     @PostMapping
-    public Customer save(@RequestBody CommonCustomer customer) {
+    public CustomerDto save(@RequestBody CustomerDto customer) {
         return service.save(customer);
     }
 
     @GetMapping
-    public List<Customer> getAll() {
+    public List<CustomerDto> getAll() {
         return service.getAllActiveCustomers();
     }
 }
