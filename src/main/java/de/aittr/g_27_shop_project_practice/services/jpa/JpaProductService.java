@@ -40,16 +40,17 @@ public class JpaProductService implements ProductService {
     public List<ProductDto> getAllActiveProducts() {
 //        Task task = new Task("Method getAllActiveProducts called");
 //        ScheduleExecutor.scheduleTaskExecution(task);
-            List<ProductDto> products = repository.findAll()
-                    .stream()
-                    .filter(x -> x.isActive())
-                    .map(x -> mappingService.mapEntityToDto(x))
-                    .toList();
+        List<ProductDto> products = repository.findAll()
+                .stream()
+                .filter(x -> x.isActive())
+                .map(x -> mappingService.mapEntityToDto(x))
+                .toList();
 
-            if (products.isEmpty()) {
-                throw new NoActiveProductsInDbException("В базе данных нет активных продуктов");
-            }
+        if (!products.isEmpty()) {
             return products;
+        }
+
+        throw new NoActiveProductsInDbException();
     }
 
     @Override
@@ -85,7 +86,7 @@ public class JpaProductService implements ProductService {
             return;
         }
 
-        throw new NoProductWithThisId("Продукта под таким id нет в базе данных, удалить не получится");
+        throw new NoProductWithThisIdException("Продукта под таким id нет в базе данных, удалить не получится");
     }
 
     @Override
@@ -93,7 +94,7 @@ public class JpaProductService implements ProductService {
     public void deleteByName(String name) {
         boolean exists = repository.existsByName(name);
         if (!exists) {
-            throw new NoSuchProductInDB(String.format("Продукт с именем %s отсутствует в базе данных", name));
+            throw new NoSuchProductInDbException(String.format("Продукт с именем %s отсутствует в базе данных", name));
         }
 
         repository.deleteByName(name);

@@ -31,14 +31,14 @@ public class CommonAdvice {
         return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
     }
 
-    @ExceptionHandler(NoProductWithThisId.class)
-    public ResponseEntity<Response> handleException(NoProductWithThisId e) {
+    @ExceptionHandler(NoProductWithThisIdException.class)
+    public ResponseEntity<Response> handleException(NoProductWithThisIdException e) {
         Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(NoSuchProductInDB.class)
-    public ResponseEntity<Response> handleException(NoSuchProductInDB e) {
+    @ExceptionHandler(NoSuchProductInDbException.class)
+    public ResponseEntity<Response> handleException(NoSuchProductInDbException e) {
         Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
