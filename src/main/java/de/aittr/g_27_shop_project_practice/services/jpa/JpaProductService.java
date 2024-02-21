@@ -2,10 +2,7 @@ package de.aittr.g_27_shop_project_practice.services.jpa;
 
 import de.aittr.g_27_shop_project_practice.domain.dto.ProductDto;
 import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.FourthTestException;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoActiveProductsInDbException;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoProductWithThisId;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.ThirdTestException;
+import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.*;
 import de.aittr.g_27_shop_project_practice.repositories.jpa.JpaProductRepository;
 import de.aittr.g_27_shop_project_practice.services.interfaces.ProductService;
 import de.aittr.g_27_shop_project_practice.services.mapping.ProductMappingService;
@@ -97,9 +94,8 @@ public class JpaProductService implements ProductService {
         try {
             repository.deleteByName(name);
         } catch (Exception e) {
-
+            throw new NoSuchProductInDB(e.getMessage());
         }
-
     }
 
     @Override

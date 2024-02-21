@@ -1,9 +1,6 @@
 package de.aittr.g_27_shop_project_practice.exception_handling;
 
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.FourthTestException;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoActiveProductsInDbException;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoProductWithThisId;
-import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.ThirdTestException;
+import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -36,6 +33,12 @@ public class CommonAdvice {
 
     @ExceptionHandler(NoProductWithThisId.class)
     public ResponseEntity<Response> handleException(NoProductWithThisId e) {
+        Response response = new Response(e.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(NoSuchProductInDB.class)
+    public ResponseEntity<Response> handleException(NoSuchProductInDB e) {
         Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
