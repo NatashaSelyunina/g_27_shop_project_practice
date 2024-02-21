@@ -73,8 +73,12 @@ public class JpaProductService implements ProductService {
 
     @Override
     public void update(ProductDto product) {
-        JpaProduct entity = mappingService.mapDtoToEntity(product);
-        repository.save(entity);
+        try {
+            JpaProduct entity = mappingService.mapDtoToEntity(product);
+            repository.save(entity);
+        } catch (Exception e) {
+            throw new IncorrectEntryProductToBeUpdatedException(e.getMessage());
+        }
     }
 
     @Override

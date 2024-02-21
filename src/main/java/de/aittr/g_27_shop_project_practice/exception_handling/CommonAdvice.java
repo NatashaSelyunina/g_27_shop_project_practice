@@ -40,6 +40,12 @@ public class CommonAdvice {
     @ExceptionHandler(NoSuchProductInDbException.class)
     public ResponseEntity<Response> handleException(NoSuchProductInDbException e) {
         Response response = new Response(e.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(IncorrectEntryProductToBeUpdatedException.class)
+    public ResponseEntity<Response> handleException(IncorrectEntryProductToBeUpdatedException e) {
+        Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
