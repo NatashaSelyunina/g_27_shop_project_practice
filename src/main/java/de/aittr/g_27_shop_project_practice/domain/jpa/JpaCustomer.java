@@ -17,13 +17,19 @@ public class JpaCustomer implements Customer {
     private String name;
     @Column(name = "is_active")
     private boolean isActive;
+    @Column(name = "age")
+    private int age;
+    @Column(name = "email")
+    private String email;
     @OneToOne(mappedBy = "customer")
     private JpaCart cart;
 
-    public JpaCustomer(int id, String name, boolean isActive, JpaCart cart) {
+    public JpaCustomer(int id, String name, boolean isActive, int age, String email, JpaCart cart) {
         this.id = id;
         this.name = name;
         this.isActive = isActive;
+        this.age = age;
+        this.email = email;
         this.cart = cart;
     }
 
@@ -63,6 +69,26 @@ public class JpaCustomer implements Customer {
     }
 
     @Override
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
     public void setCart(Cart cart) {
         JpaCart entity = new JpaCart();
         entity.setId(cart.getId());
@@ -74,13 +100,15 @@ public class JpaCustomer implements Customer {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        JpaCustomer that = (JpaCustomer) o;
-        return id == that.id && isActive == that.isActive && Objects.equals(name, that.name) && Objects.equals(cart, that.cart);
+        JpaCustomer customer = (JpaCustomer) o;
+        return id == customer.id && isActive == customer.isActive && age == customer.age
+                && Objects.equals(name, customer.name) && Objects.equals(email, customer.email)
+                && Objects.equals(cart, customer.cart);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, isActive, cart);
+        return Objects.hash(id, name, isActive, age, email, cart);
     }
 
     @Override
@@ -89,6 +117,8 @@ public class JpaCustomer implements Customer {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", isActive=" + isActive +
+                ", age=" + age +
+                ", email='" + email + '\'' +
                 ", cart=" + cart +
                 '}';
     }
