@@ -3,6 +3,7 @@ package de.aittr.g_27_shop_project_practice.services.jpa;
 import de.aittr.g_27_shop_project_practice.domain.dto.ProductDto;
 import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.FourthTestException;
+import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoActiveProductsInDbException;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.ThirdTestException;
 import de.aittr.g_27_shop_project_practice.repositories.jpa.JpaProductRepository;
 import de.aittr.g_27_shop_project_practice.services.interfaces.ProductService;
@@ -41,11 +42,16 @@ public class JpaProductService implements ProductService {
     public List<ProductDto> getAllActiveProducts() {
 //        Task task = new Task("Method getAllActiveProducts called");
 //        ScheduleExecutor.scheduleTaskExecution(task);
-        return repository.findAll()
-                .stream()
-                .filter(x -> x.isActive())
-                .map(x -> mappingService.mapEntityToDto(x))
-                .toList();
+            List<ProductDto> products = repository.findAll()
+                    .stream()
+                    .filter(x -> x.isActive())
+                    .map(x -> mappingService.mapEntityToDto(x))
+                    .toList();
+
+            if (products.isEmpty()) {
+                throw new NoActiveProductsInDbException("В базе данных нет активных продуктов");
+            }
+            return products;
     }
 
     @Override

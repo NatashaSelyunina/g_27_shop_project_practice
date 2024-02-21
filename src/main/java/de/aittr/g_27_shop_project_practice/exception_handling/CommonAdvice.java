@@ -1,6 +1,7 @@
 package de.aittr.g_27_shop_project_practice.exception_handling;
 
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.FourthTestException;
+import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoActiveProductsInDbException;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.ThirdTestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,5 +25,11 @@ public class CommonAdvice {
     public ResponseEntity<Response> handleException(FourthTestException e) {
         Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(NoActiveProductsInDbException.class)
+    public ResponseEntity<Response> handleException(NoActiveProductsInDbException e) {
+        Response response = new Response(e.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
     }
 }

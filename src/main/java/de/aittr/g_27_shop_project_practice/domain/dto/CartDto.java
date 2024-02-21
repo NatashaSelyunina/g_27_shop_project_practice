@@ -1,7 +1,5 @@
 package de.aittr.g_27_shop_project_practice.domain.dto;
 
-import de.aittr.g_27_shop_project_practice.domain.interfaces.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
