@@ -4,6 +4,7 @@ import de.aittr.g_27_shop_project_practice.domain.dto.ProductDto;
 import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.FourthTestException;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoActiveProductsInDbException;
+import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.NoProductWithThisId;
 import de.aittr.g_27_shop_project_practice.exception_handling.exceptions.ThirdTestException;
 import de.aittr.g_27_shop_project_practice.repositories.jpa.JpaProductRepository;
 import de.aittr.g_27_shop_project_practice.services.interfaces.ProductService;
@@ -84,13 +85,21 @@ public class JpaProductService implements ProductService {
         JpaProduct product = repository.findById(id).orElse(null);
         if (product != null) {
             repository.deleteById(id);
+            return;
         }
+
+        throw new NoProductWithThisId("Продукта под таким id нет в базе данных, удалить не получится");
     }
 
     @Override
     @Transactional
     public void deleteByName(String name) {
-        repository.deleteByName(name);
+        try {
+            repository.deleteByName(name);
+        } catch (Exception e) {
+
+        }
+
     }
 
     @Override
