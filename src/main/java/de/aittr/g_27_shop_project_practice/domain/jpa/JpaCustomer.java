@@ -3,6 +3,7 @@ package de.aittr.g_27_shop_project_practice.domain.jpa;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Cart;
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import java.util.Objects;
 
@@ -14,12 +15,17 @@ public class JpaCustomer implements Customer {
     @Column(name = "id")
     private int id;
     @Column(name = "name")
+    @Pattern(regexp = "^[A-Z].*")
     private String name;
     @Column(name = "is_active")
+    @NotNull
     private boolean isActive;
     @Column(name = "age")
+    @Max(150)
+    @Min(5)
     private int age;
     @Column(name = "email")
+    @Email
     private String email;
     @OneToOne(mappedBy = "customer")
     private JpaCart cart;
@@ -31,6 +37,14 @@ public class JpaCustomer implements Customer {
         this.age = age;
         this.email = email;
         this.cart = cart;
+    }
+
+    public JpaCustomer(int id, String name, boolean isActive, int age, String email) {
+        this.id = id;
+        this.name = name;
+        this.isActive = isActive;
+        this.age = age;
+        this.email = email;
     }
 
     @Override

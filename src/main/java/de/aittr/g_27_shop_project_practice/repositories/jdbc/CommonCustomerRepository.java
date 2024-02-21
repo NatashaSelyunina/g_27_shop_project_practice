@@ -27,12 +27,14 @@ public class CommonCustomerRepository implements CustomerRepository {
     private final String PRODUCT_NAME = "p.name";
     private final String PRICE = "price";
     private final String IS_ACTIVE = "is_active";
+    private final String AGE = "age";
+    private final String EMAIL = "email";
 
     @Override
     public Customer save(Customer customer) {
         try (Connection connection = getConnection()){
-            String query = String.format("INSERT INTO `customer` (`name`, `is_active`) " +
-                    "VALUES ('%s', '1');", customer.getName());
+            String query = String.format("INSERT INTO `customer` (`name`, `is_active`, `age`, `email`) " +
+                    "VALUES ('%s', '1', '%d', '%s');", customer.getName(), customer.getAge(), customer.getEmail());
             connection.createStatement().execute(query);
 
             query = "select id from customer order by id desc limit 1;";
@@ -63,7 +65,7 @@ public class CommonCustomerRepository implements CustomerRepository {
     @Override
     public List<Customer> getAll() {
         try (Connection connection = getConnection()) {
-            String query = "SELECT cu.id, cu.name, ca.id, cp.product_id, p.name, p.price, p.is_active " +
+            String query = "SELECT cu.id, cu.name, cu.age, cu.email, ca.id, cp.product_id, p.name, p.price, p.is_active " +
                     "FROM customer as cu " +
                     "left join cart as ca on cu.id = ca.customer_id " +
                     "left join cart_product as cp on ca.id = cp.cart_id " +
@@ -86,7 +88,10 @@ public class CommonCustomerRepository implements CustomerRepository {
                     Cart cart = new CommonCart(cartId);
 
                     String customerName = resultSet.getString(CUSTOMER_NAME);
-                    customer = new CommonCustomer(customerId, true, customerName, cart);
+                    int customerAge = resultSet.getInt(AGE);
+                    String customerEmail = resultSet.getString(EMAIL);
+                    customer = new CommonCustomer(
+                            customerId, true, customerName, customerAge, customerEmail, cart);
                     customers.put(customerId, customer);
                 }
 

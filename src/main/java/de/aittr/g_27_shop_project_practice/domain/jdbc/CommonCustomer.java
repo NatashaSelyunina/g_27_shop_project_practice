@@ -33,6 +33,14 @@ public class CommonCustomer implements Customer {
         this.cart = cart;
     }
 
+    public CommonCustomer(int id, boolean isActive, String name, int age, String email) {
+        this.id = id;
+        this.isActive = isActive;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
     @Override
     public int getId() {
         return id;

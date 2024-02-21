@@ -1,9 +1,8 @@
 package de.aittr.g_27_shop_project_practice.controllers;
 
 import de.aittr.g_27_shop_project_practice.domain.dto.CustomerDto;
-import de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCustomer;
-import de.aittr.g_27_shop_project_practice.domain.interfaces.Customer;
 import de.aittr.g_27_shop_project_practice.services.interfaces.CustomerService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public CustomerDto save(@RequestBody CustomerDto customer) {
+    public CustomerDto save(@Valid @RequestBody CustomerDto customer) {
         return service.save(customer);
     }
 

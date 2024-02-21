@@ -21,21 +21,25 @@ public class CustomerMappingService {
     public CustomerDto mapEntityToDto(Customer customer) {
         int id = customer.getId();
         String name = customer.getName();
+        int age = customer.getAge();
+        String email = customer.getEmail();
         CartDto cartDto = mappingService.mapEntityToDto(customer.getCart());
-        return new CustomerDto(id, name, cartDto);
+        return new CustomerDto(id, name, age, email, cartDto);
     }
 
     public JpaCustomer mapDtoToEntity(CustomerDto dto) {
         int id = dto.getId();
         String name = dto.getName();
-        JpaCart jpaCart = mappingService.mapDtoToEntity(dto.getCartDto());
-        return new JpaCustomer(id, name, true, jpaCart);
+        int age = dto.getAge();
+        String email = dto.getEmail();
+        return new JpaCustomer(id, name, true, age, email);
     }
 
     public CommonCustomer mapDtoToCommonCustomer(CustomerDto dto) {
         int id = dto.getId();
         String name = dto.getName();
-        CommonCart commonCart = mappingService.mapDtoToCommonCart(dto.getCartDto());
-        return new CommonCustomer(id, true, name, commonCart);
+        int age = dto.getAge();
+        String email = dto.getEmail();
+        return new CommonCustomer(id, true, name, age, email);
     }
 }
