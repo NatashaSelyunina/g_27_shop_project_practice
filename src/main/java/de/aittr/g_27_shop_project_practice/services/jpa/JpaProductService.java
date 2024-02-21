@@ -107,7 +107,10 @@ public class JpaProductService implements ProductService {
 
         if (product != null) {
             product.setActive(true);
+            return;
         }
+
+        throw new NoProductWithThisIdException("Продукта под таким id нет в базе данных, восстановить не получится");
     }
 
     @Override
