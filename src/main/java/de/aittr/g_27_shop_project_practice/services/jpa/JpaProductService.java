@@ -91,11 +91,12 @@ public class JpaProductService implements ProductService {
     @Override
     @Transactional
     public void deleteByName(String name) {
-        try {
-            repository.deleteByName(name);
-        } catch (Exception e) {
-            throw new NoSuchProductInDB(e.getMessage());
+        boolean exists = repository.existsByName(name);
+        if (!exists) {
+            throw new NoSuchProductInDB(String.format("Продукт с именем %s отсутствует в базе данных", name));
         }
+
+        repository.deleteByName(name);
     }
 
     @Override
