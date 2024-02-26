@@ -6,28 +6,32 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Aspect
 @Component
 public class AspectLogging {
     private Logger logger = LoggerFactory.getLogger(AspectLogging.class);
-    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
-            "JpaProductService.getAllActiveProducts(..))")
-    public void getProducts() {}
 
-    @Before("getProducts()")
-    public void beforeGetProduct(JoinPoint joinPoint) {
-        logger.info("Вызван метод getAllActiveProducts");
-    }
 
-    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
-            "JpaProductService.restoreById(..))")
-    public void restore() {}
-
-    @After("restore()")
-    public void afterRestore(JoinPoint joinPoint) {
-        Object[] args = joinPoint.getArgs();
-        logger.info(String.format("Метод restoreById вызван с параметром %s", args[0]));
-    }
+//    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
+//            "JpaProductService.getAllActiveProducts(..))")
+//    public void getProducts() {}
+//
+//    @Before("getProducts()")
+//    public void beforeGetProduct(JoinPoint joinPoint) {
+//        logger.info("Вызван метод getAllActiveProducts");
+//    }
+//
+//    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
+//            "JpaProductService.restoreById(..))")
+//    public void restore() {}
+//
+//    @After("restore()")
+//    public void afterRestore(JoinPoint joinPoint) {
+//        Object[] args = joinPoint.getArgs();
+//        logger.info(String.format("Метод restoreById вызван с параметром %s", args[0]));
+//    }
 //
 //    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
 //            "JpaProductService.getActiveProductById(..))")
@@ -48,4 +52,21 @@ public class AspectLogging {
 //    public void afterThrowing(Exception e) {
 //        logger.info(String.format("Метод getActiveProductById выбросил исключение %s", e.getMessage()));
 //    }
+
+
+    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa.JpaProductService.*(..))")
+    public void logJpaProductService() {}
+
+    @Before("logJpaProductService()")
+    public void before(JoinPoint joinPoint) {
+        String name = joinPoint.getSignature().getName();
+        String args = Arrays.toString(joinPoint.getArgs());
+        logger.info(String.format("Вызван метод %s с параметрами" + args, name));
+    }
+
+    @After("logJpaProductService()")
+    public void after(JoinPoint joinPoint) {
+        String name = joinPoint.getSignature().getName();
+        logger.info(String.format("Метод %s завершил работу", name));
+    }
 }
