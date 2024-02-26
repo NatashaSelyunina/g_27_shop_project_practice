@@ -529,3 +529,126 @@ Caused by: org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationExceptio
 2024-02-26T15:15:42.578+03:00  INFO 15620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-26T15:15:42.579+03:00  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-02-26T15:15:42.588+03:00  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-26T15:28:24.832+03:00  INFO 2320 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Starting G27ShopProjectPracticeApplication using Java 21.0.2 with PID 2320 (C:\Users\Natasha\Downloads\g_27_shop_project_practice\target\classes started by Natasha in C:\Users\Natasha\Downloads\g_27_shop_project_practice)
+2024-02-26T15:28:24.834+03:00  INFO 2320 --- [main] d.a.g.G27ShopProjectPracticeApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-26T15:28:25.668+03:00  INFO 2320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T15:28:25.746+03:00  INFO 2320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2024-02-26T15:28:26.545+03:00  INFO 2320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-26T15:28:26.556+03:00  INFO 2320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-26T15:28:26.557+03:00  INFO 2320 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-26T15:28:26.659+03:00  INFO 2320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-26T15:28:26.659+03:00  INFO 2320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1767 ms
+2024-02-26T15:28:26.882+03:00  INFO 2320 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26T15:28:26.941+03:00  INFO 2320 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-26T15:28:26.943+03:00  INFO 2320 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-26T15:28:27.227+03:00  INFO 2320 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26T15:28:27.254+03:00  INFO 2320 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-26T15:28:27.621+03:00  INFO 2320 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a88f6fb
+2024-02-26T15:28:27.624+03:00  INFO 2320 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-26T15:28:28.452+03:00  INFO 2320 --- [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: de.aittr.g_27_shop_project_practice.domain.jpa.JpaCustomer (class must be instantiated by Interceptor)
+2024-02-26T15:28:28.636+03:00  INFO 2320 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-26T15:28:28.639+03:00  INFO 2320 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T15:28:29.086+03:00  WARN 2320 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26T15:28:29.528+03:00  INFO 2320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-26T15:28:29.539+03:00  INFO 2320 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Started G27ShopProjectPracticeApplication in 5.17 seconds (process running for 5.574)
+2024-02-26T15:29:05.204+03:00  INFO 2320 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-26T15:29:05.205+03:00  INFO 2320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-26T15:29:05.207+03:00  INFO 2320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-26T15:29:05.326+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.326+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.326+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.326+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.326+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.327+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.328+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T15:29:05.332+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.332+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.333+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.333+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.333+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.334+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.334+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.334+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.334+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.334+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.335+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.335+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.335+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.336+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.337+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.337+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.337+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.337+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.337+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.338+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.339+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.340+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:29:05.342+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:29:05.342+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:29:05.342+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:29:05.342+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:29:05.342+03:00  INFO 2320 --- [http-nio-8080-exec-1] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:31:20.660+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer с параметрами
+2024-02-26T15:31:20.677+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:31:20.677+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:31:20.677+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:31:20.685+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод setId в классе CommonCustomer
+2024-02-26T15:31:20.692+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод setCart в классе CommonCustomer
+2024-02-26T15:31:20.693+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T15:31:20.693+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T15:31:20.693+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T15:31:20.693+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T15:31:20.693+03:00  INFO 2320 --- [http-nio-8080-exec-4] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T15:32:01.530+03:00  INFO 2320 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T15:32:01.534+03:00  INFO 2320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-26T15:32:01.540+03:00  INFO 2320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
