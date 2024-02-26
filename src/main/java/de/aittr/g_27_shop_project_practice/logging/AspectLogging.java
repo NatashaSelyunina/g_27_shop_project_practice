@@ -28,24 +28,24 @@ public class AspectLogging {
         Object[] args = joinPoint.getArgs();
         logger.info(String.format("Метод restoreById вызван с параметром %s", args[0]));
     }
-
-    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
-            "JpaProductService.getActiveProductById(..))")
-    public void getProduct() {}
-
-    @AfterReturning(
-            pointcut = "getProduct()",
-            returning = "result"
-    )
-    public void afterReturningProduct(Object result) {
-        logger.info(String.format("Метод getActiveProductById успешно вернул объект %s", result));
-    }
-
-    @AfterThrowing(
-            pointcut = "getProduct()",
-            throwing = "e"
-    )
-    public void afterThrowing(Exception e) {
-        logger.info(String.format("Метод getActiveProductById выбросил исключение %s", e.getMessage()));
-    }
+//
+//    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services.jpa." +
+//            "JpaProductService.getActiveProductById(..))")
+//    public void getProduct() {}
+//
+//    @AfterReturning(
+//            pointcut = "getProduct()",
+//            returning = "result"
+//    )
+//    public void afterReturningProduct(Object result) {
+//        logger.info(String.format("Метод getActiveProductById успешно вернул объект %s", result));
+//    }
+//
+//    @AfterThrowing(
+//            pointcut = "getProduct()",
+//            throwing = "e"
+//    )
+//    public void afterThrowing(Exception e) {
+//        logger.info(String.format("Метод getActiveProductById выбросил исключение %s", e.getMessage()));
+//    }
 }

@@ -2,6 +2,8 @@ package de.aittr.g_27_shop_project_practice.domain.jpa;
 
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Product;
 import jakarta.persistence.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
@@ -22,10 +24,14 @@ public class JpaProduct implements Product {
     @Column(name = "is_active")
     private boolean isActive;
 
+    //private static final Logger logger = LoggerFactory.getLogger(JpaProduct.class);
+
     public JpaProduct() {
+        //logger.info("Вызван конструктор без параметров");
     }
 
     public JpaProduct(int id, String name, double price, boolean isActive) {
+        //logger.info("Вызван конструктор с параметрами");
         this.id = id;
         this.name = name;
         this.price = price;
@@ -34,31 +40,37 @@ public class JpaProduct implements Product {
 
     @Override
     public int getId() {
+        //logger.info("Вызван метод getId у продукта");
         return id;
     }
 
     @Override
     public void setId(int id) {
+        //logger.info("Вызван метод setId у продукта");
         this.id = id;
     }
 
     @Override
     public String getName() {
+        //logger.info("Вызван метод getName у продукта");
         return name;
     }
 
     @Override
     public void setName(String name) {
+        //logger.info("Вызван метод setName у продукта");
         this.name = name;
     }
 
     @Override
     public double getPrice() {
+        //logger.info("Вызван метод getPrice у продукта");
         return price;
     }
 
     @Override
     public void setPrice(double price) {
+        //logger.info("Вызван метод setPrice у продукта");
         this.price = price;
     }
 
