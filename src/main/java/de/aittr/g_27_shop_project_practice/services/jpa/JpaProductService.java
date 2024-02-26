@@ -145,4 +145,8 @@ public class JpaProductService implements ProductService {
                 .orElse(0);
         return averagePrice;
     }
+
+    public String getNameLastProduct() {
+        return repository.getNameLastProduct();
+    }
 }

@@ -1,6 +1,8 @@
 package de.aittr.g_27_shop_project_practice.scheduling;
 
+import de.aittr.g_27_shop_project_practice.domain.jpa.JpaProduct;
 import de.aittr.g_27_shop_project_practice.domain.jpa.Task;
+import de.aittr.g_27_shop_project_practice.repositories.jpa.JpaProductRepository;
 import de.aittr.g_27_shop_project_practice.services.jpa.TaskService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +21,11 @@ import java.util.List;
 public class ScheduleExecutor {
     private static Logger logger = LoggerFactory.getLogger(ScheduleExecutor.class);
     private TaskService taskService;
+    private JpaProductRepository repository;
 
-    public ScheduleExecutor(TaskService taskService) {
+    public ScheduleExecutor(TaskService taskService, JpaProductRepository repository) {
         this.taskService = taskService;
+        this.repository = repository;
     }
 
 //    @Scheduled(fixedDelay = 5000)
@@ -140,5 +144,11 @@ public class ScheduleExecutor {
             System.out.println(String.format("Задача '%s', время выполнения - %s",
                     task.getDescription(), task.getExecutedAt()));
         }
+    }
+
+    @Scheduled(cron = "15,45 * * * * *")
+    public void scheduleLastProductBd() {
+        String nameProduct = repository.getNameLastProduct();
+        taskService.createTask(String.format("Последний добавленный в БД продукт - %s", nameProduct));
     }
 }

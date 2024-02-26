@@ -77,42 +77,42 @@ public class AspectLogging {
 
 
     // Логирование всех сервисов
-    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services..*.*(..))")
-    public void logServices() {}
-
-    @Before("logServices()")
-    public void before(JoinPoint joinPoint) {
-        String className = joinPoint.getTarget().getClass().getSimpleName();
-        String name = joinPoint.getSignature().getName();
-        String args = Arrays.toString(joinPoint.getArgs());
-        logger.info(String.format("Вызван метод %s класса %s с параметрами" + args, name, className));
-    }
-
-    @After("logServices()")
-    public void after(JoinPoint joinPoint) {
-        String className = joinPoint.getTarget().getClass().getSimpleName();
-        String name = joinPoint.getSignature().getName();
-        logger.info(String.format("Метод %s класса %s завершил работу", name, className));
-    }
-
-    @AfterReturning(
-            pointcut = "logServices()",
-            returning = "result"
-    )
-    public void afterReturning(JoinPoint joinPoint, Object result) {
-        String className = joinPoint.getTarget().getClass().getSimpleName();
-        String name = joinPoint.getSignature().getName();
-        logger.info(String.format("Метод %s класса %s успешно вернул результат - объект %s", name, className, result));
-    }
-
-    @AfterThrowing(
-            pointcut = "logServices()",
-            throwing = "e"
-    )
-    public void afterThrowing(JoinPoint joinPoint, Exception e) {
-        String className = joinPoint.getTarget().getClass().getSimpleName();
-        String name = joinPoint.getSignature().getName();
-        logger.info(String.format("Метод %s класса %s вызвал ошибку - выбросил исключение '%s'",
-                name, className, e.getMessage()));
-    }
+//    @Pointcut("execution(* de.aittr.g_27_shop_project_practice.services..*.*(..))")
+//    public void logServices() {}
+//
+//    @Before("logServices()")
+//    public void before(JoinPoint joinPoint) {
+//        String className = joinPoint.getTarget().getClass().getSimpleName();
+//        String name = joinPoint.getSignature().getName();
+//        String args = Arrays.toString(joinPoint.getArgs());
+//        logger.info(String.format("Вызван метод %s класса %s с параметрами" + args, name, className));
+//    }
+//
+//    @After("logServices()")
+//    public void after(JoinPoint joinPoint) {
+//        String className = joinPoint.getTarget().getClass().getSimpleName();
+//        String name = joinPoint.getSignature().getName();
+//        logger.info(String.format("Метод %s класса %s завершил работу", name, className));
+//    }
+//
+//    @AfterReturning(
+//            pointcut = "logServices()",
+//            returning = "result"
+//    )
+//    public void afterReturning(JoinPoint joinPoint, Object result) {
+//        String className = joinPoint.getTarget().getClass().getSimpleName();
+//        String name = joinPoint.getSignature().getName();
+//        logger.info(String.format("Метод %s класса %s успешно вернул результат - объект %s", name, className, result));
+//    }
+//
+//    @AfterThrowing(
+//            pointcut = "logServices()",
+//            throwing = "e"
+//    )
+//    public void afterThrowing(JoinPoint joinPoint, Exception e) {
+//        String className = joinPoint.getTarget().getClass().getSimpleName();
+//        String name = joinPoint.getSignature().getName();
+//        logger.info(String.format("Метод %s класса %s вызвал ошибку - выбросил исключение '%s'",
+//                name, className, e.getMessage()));
+//    }
 }
