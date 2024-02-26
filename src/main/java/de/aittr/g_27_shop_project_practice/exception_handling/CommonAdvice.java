@@ -38,8 +38,11 @@ public class CommonAdvice {
 
     @ExceptionHandler(NoProductWithThisIdException.class)
     public ResponseEntity<Response> handleException(NoProductWithThisIdException e) {
-        Response response = new Response(e.getMessage());
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        return ResponseEntity
+                .status(e.getStatus())
+                .body(Response.builder()
+                        .message(e.getMessage())
+                        .build());
     }
 
     @ExceptionHandler(NoSuchProductInDbException.class)

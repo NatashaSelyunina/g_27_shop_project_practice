@@ -1,9 +1,12 @@
 package de.aittr.g_27_shop_project_practice.exception_handling;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.Map;
 
 public class Response {
     private String message;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private Map<String, String> errors;
 
     public Response(String message) {
