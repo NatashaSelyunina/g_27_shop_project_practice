@@ -1,10 +1,18 @@
 package de.aittr.g_27_shop_project_practice.domain.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Pattern;
+
 import java.util.Objects;
 
 public class ProductDto {
     private int id;
+    @Pattern(regexp = "[A-Z][a-z]{3,}", message =
+            "Наименование продукта должно начинаться с большой буквы и содержать как минимум 4 буквы")
     private String name;
+    @Max(value = 90000, message = "Цена продукта не должна быть выше 90000")
+    @Min(value = 10, message = "Цена продукта не должна быть ниже 10")
     private double price;
 
     public ProductDto(int id, String name, double price) {

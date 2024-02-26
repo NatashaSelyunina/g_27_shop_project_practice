@@ -16,14 +16,9 @@ public class JpaProduct implements Product {
 
     // Минимум 4 буквы, первая большая, остальные маленькие, не было символов, цифр.
     @Column(name = "name")
-    //@NotNull
-    //@NotBlank
-    @Pattern(regexp = "[A-Z][a-z]{3,}")
     private String name;
 
     @Column(name = "price")
-    @Max(90000)
-    @Min(10)
     private double price;
     @Column(name = "is_active")
     private boolean isActive;
