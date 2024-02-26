@@ -99,19 +99,20 @@ public class AspectLogging {
             pointcut = "logServices()",
             returning = "result"
     )
-    public void afterReturning(JoinPoint joinPoint) {
+    public void afterReturning(JoinPoint joinPoint, Object result) {
         String className = joinPoint.getTarget().getClass().getSimpleName();
         String name = joinPoint.getSignature().getName();
-        logger.info(String.format("Метод %s класса %s успешно вернул результат", name, className));
+        logger.info(String.format("Метод %s класса %s успешно вернул результат - объект %s", name, className, result));
     }
 
     @AfterThrowing(
             pointcut = "logServices()",
             throwing = "e"
     )
-    public void afterThrowing(JoinPoint joinPoint) {
+    public void afterThrowing(JoinPoint joinPoint, Exception e) {
         String className = joinPoint.getTarget().getClass().getSimpleName();
         String name = joinPoint.getSignature().getName();
-        logger.info(String.format("Метод %s класса %s вызвал ошибку", name, className));
+        logger.info(String.format("Метод %s класса %s вызвал ошибку - выбросил исключение '%s'",
+                name, className, e.getMessage()));
     }
 }
