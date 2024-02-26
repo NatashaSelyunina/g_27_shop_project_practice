@@ -773,3 +773,328 @@ execution(*de.aittr.g_27_shop_project_practice.services.jpa.JpaProductService.*(
 2024-02-26T16:12:12.634+03:00  INFO 7956 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-26T16:12:12.637+03:00  INFO 7956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-02-26T16:12:12.646+03:00  INFO 7956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-26T16:34:52.154+03:00  INFO 3320 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Starting G27ShopProjectPracticeApplication using Java 21.0.2 with PID 3320 (C:\Users\Natasha\Downloads\g_27_shop_project_practice\target\classes started by Natasha in C:\Users\Natasha\Downloads\g_27_shop_project_practice)
+2024-02-26T16:34:52.156+03:00  INFO 3320 --- [main] d.a.g.G27ShopProjectPracticeApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-26T16:34:53.035+03:00  INFO 3320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T16:34:53.121+03:00  INFO 3320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2024-02-26T16:34:53.516+03:00  WARN 3320 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-02-26T16:34:53.527+03:00  INFO 3320 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-26T16:34:53.545+03:00 ERROR 3320 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:796) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:600) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at de.aittr.g_27_shop_project_practice.G27ShopProjectPracticeApplication.main(G27ShopProjectPracticeApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: de.aittr.g_27_shop_project_practice.services [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:412) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: de.aittr.g_27_shop_project_practice.services [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.20.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 36 common frames omitted
+
+2024-02-26T16:41:43.085+03:00  INFO 1288 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Starting G27ShopProjectPracticeApplication using Java 21.0.2 with PID 1288 (C:\Users\Natasha\Downloads\g_27_shop_project_practice\target\classes started by Natasha in C:\Users\Natasha\Downloads\g_27_shop_project_practice)
+2024-02-26T16:41:43.087+03:00  INFO 1288 --- [main] d.a.g.G27ShopProjectPracticeApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-26T16:41:43.972+03:00  INFO 1288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T16:41:44.050+03:00  INFO 1288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2024-02-26T16:41:45.029+03:00  INFO 1288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-26T16:41:45.045+03:00  INFO 1288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-26T16:41:45.045+03:00  INFO 1288 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-26T16:41:45.159+03:00  INFO 1288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-26T16:41:45.159+03:00  INFO 1288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2015 ms
+2024-02-26T16:41:45.422+03:00  INFO 1288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26T16:41:45.517+03:00  INFO 1288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-26T16:41:45.520+03:00  INFO 1288 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-26T16:41:45.823+03:00  INFO 1288 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26T16:41:45.851+03:00  INFO 1288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-26T16:41:46.214+03:00  INFO 1288 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74707df8
+2024-02-26T16:41:46.216+03:00  INFO 1288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-26T16:41:47.054+03:00  INFO 1288 --- [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: de.aittr.g_27_shop_project_practice.domain.jpa.JpaCustomer (class must be instantiated by Interceptor)
+2024-02-26T16:41:47.236+03:00  INFO 1288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-26T16:41:47.243+03:00  INFO 1288 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T16:41:48.320+03:00  WARN 1288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26T16:41:49.070+03:00  INFO 1288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-26T16:41:49.081+03:00  INFO 1288 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Started G27ShopProjectPracticeApplication in 6.478 seconds (process running for 6.868)
+2024-02-26T16:42:02.069+03:00  INFO 1288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-26T16:42:02.070+03:00  INFO 1288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-26T16:42:02.071+03:00  INFO 1288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-26T16:42:02.126+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод getAllActiveProducts класса JpaProductService с параметрами[]
+2024-02-26T16:42:02.379+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=1, name='Banana', price=120.0, isActive=true}]
+2024-02-26T16:42:02.381+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.381+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.381+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=2, name='Apple', price=90.0, isActive=true}]
+2024-02-26T16:42:02.381+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.382+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.382+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=4, name='Lemon', price=170.0, isActive=true}]
+2024-02-26T16:42:02.382+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.382+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.382+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=5, name='Test', price=202.0, isActive=true}]
+2024-02-26T16:42:02.383+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.383+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.383+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=6, name='Coconut', price=140.0, isActive=true}]
+2024-02-26T16:42:02.383+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.384+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.384+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=8, name='Cherry', price=200.0, isActive=true}]
+2024-02-26T16:42:02.384+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.384+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.384+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=13, name='Product', price=1500.0, isActive=true}]
+2024-02-26T16:42:02.385+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.385+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.385+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=14, name='Peper', price=205.0, isActive=true}]
+2024-02-26T16:42:02.386+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.386+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.386+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=15, name='Book', price=515.0, isActive=true}]
+2024-02-26T16:42:02.386+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.386+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.387+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=16, name='Fish', price=384.0, isActive=true}]
+2024-02-26T16:42:02.387+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.387+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.387+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=17, name='Bread', price=100.0, isActive=true}]
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=19, name='Sausages', price=254.0, isActive=true}]
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:42:02.388+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод getAllActiveProducts класса JpaProductService успешно вернул результат
+2024-02-26T16:42:02.389+03:00  INFO 1288 --- [http-nio-8080-exec-1] d.a.g.logging.AspectLogging              : Метод getAllActiveProducts класса JpaProductService завершил работу
+2024-02-26T16:43:43.092+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Вызван метод save класса JpaProductService с параметрами[ProductDto{id=0, name='Chocolate', price=212.3}]
+2024-02-26T16:43:43.093+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Вызван метод mapDtoToEntity класса ProductMappingService с параметрами[ProductDto{id=0, name='Chocolate', price=212.3}]
+2024-02-26T16:43:43.093+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод mapDtoToEntity класса ProductMappingService успешно вернул результат
+2024-02-26T16:43:43.093+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод mapDtoToEntity класса ProductMappingService завершил работу
+2024-02-26T16:43:43.161+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса ProductMappingService с параметрами[JpaProduct{id=20, name='Chocolate', price=212.3, isActive=true}]
+2024-02-26T16:43:43.161+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService успешно вернул результат
+2024-02-26T16:43:43.162+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса ProductMappingService завершил работу
+2024-02-26T16:43:43.162+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод save класса JpaProductService успешно вернул результат
+2024-02-26T16:43:43.162+03:00  INFO 1288 --- [http-nio-8080-exec-5] d.a.g.logging.AspectLogging              : Метод save класса JpaProductService завершил работу
+2024-02-26T16:45:21.268+03:00  INFO 1288 --- [http-nio-8080-exec-8] d.a.g.logging.AspectLogging              : Вызван метод getActiveProductById класса JpaProductService с параметрами[54]
+2024-02-26T16:45:21.295+03:00  INFO 1288 --- [http-nio-8080-exec-8] d.a.g.logging.AspectLogging              : Метод getActiveProductById класса JpaProductService вызвал ошибку
+2024-02-26T16:45:21.295+03:00  INFO 1288 --- [http-nio-8080-exec-8] d.a.g.logging.AspectLogging              : Метод getActiveProductById класса JpaProductService завершил работу
+2024-02-26T16:46:06.170+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод getAllActiveCustomers класса CommonCustomerService с параметрами[]
+2024-02-26T16:46:06.205+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.206+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.207+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.208+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.208+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.208+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.208+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.208+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.209+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван конструктор класса CommonCustomer со всеми параметрами
+2024-02-26T16:46:06.220+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=1, isActive=true, name='Alex', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@159921ab}]
+2024-02-26T16:46:06.221+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.221+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.221+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.221+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.221+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.222+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@159921ab]
+2024-02-26T16:46:06.223+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.223+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.223+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.223+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=2, isActive=true, name='Gleb', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@9fdea42}]
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.224+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@9fdea42]
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=3, isActive=true, name='John', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@acf6af7}]
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.225+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@acf6af7]
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=4, isActive=true, name='Mike', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@1c8b9c10}]
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.226+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@1c8b9c10]
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=6, isActive=true, name='Ninel', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@5bb41e54}]
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.227+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@5bb41e54]
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.228+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=7, isActive=true, name='Diana', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@3d7d409a}]
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.229+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.231+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@3d7d409a]
+2024-02-26T16:46:06.232+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.232+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.232+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.232+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=8, isActive=true, name='Lidia', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@4c140d10}]
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@4c140d10]
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.233+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=9, isActive=true, name='Denis', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@cbf639e}]
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@cbf639e]
+2024-02-26T16:46:06.234+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.235+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.235+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.235+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=10, isActive=true, name='Sasha', age=0, email='', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@77029ae3}]
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@77029ae3]
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.236+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.237+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.237+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.237+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=11, isActive=true, name='Igor', age=23, email='igor@gmail.com', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@20ac6d09}]
+2024-02-26T16:46:06.238+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.238+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.238+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.239+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.239+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.239+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@20ac6d09]
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=12, isActive=true, name='Igor', age=23, email='igor@gmail.com', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@4cbc9881}]
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@4cbc9881]
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=13, isActive=true, name='larisa', age=50, email='larisa@gmail.com', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@3be8a11b}]
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.240+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@3be8a11b]
+2024-02-26T16:46:06.241+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.241+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.241+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.241+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.242+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=14, isActive=true, name='Nina', age=28, email='nina@gmail.com', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@58dee107}]
+2024-02-26T16:46:06.242+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.243+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.243+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.243+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.243+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.243+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@58dee107]
+2024-02-26T16:46:06.244+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.244+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.245+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.246+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.247+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CustomerMappingService с параметрами[CommonCustomer{id=15, isActive=true, name='Kirill', age=78, email='kirill@gmail.com', cart=de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@1b590b30}]
+2024-02-26T16:46:06.247+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getId в классе CommonCustomer
+2024-02-26T16:46:06.247+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getName в классе CommonCustomer
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getAge в классе CommonCustomer
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getEmail в классе CommonCustomer
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.domain.jdbc.CommonCustomer         : Вызван метод getCart в классе CommonCustomer
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Вызван метод mapEntityToDto класса CartMappingService с параметрами[de.aittr.g_27_shop_project_practice.domain.jdbc.CommonCart@1b590b30]
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService успешно вернул результат
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CartMappingService завершил работу
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService успешно вернул результат
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод mapEntityToDto класса CustomerMappingService завершил работу
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод getAllActiveCustomers класса CommonCustomerService успешно вернул результат
+2024-02-26T16:46:06.248+03:00  INFO 1288 --- [http-nio-8080-exec-9] d.a.g.logging.AspectLogging              : Метод getAllActiveCustomers класса CommonCustomerService завершил работу
+2024-02-26T16:46:23.290+03:00  INFO 1288 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T16:46:23.293+03:00  INFO 1288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-26T16:46:23.304+03:00  INFO 1288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
