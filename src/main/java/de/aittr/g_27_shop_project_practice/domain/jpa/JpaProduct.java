@@ -2,7 +2,6 @@ package de.aittr.g_27_shop_project_practice.domain.jpa;
 
 import de.aittr.g_27_shop_project_practice.domain.interfaces.Product;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 
 import java.util.Objects;
 

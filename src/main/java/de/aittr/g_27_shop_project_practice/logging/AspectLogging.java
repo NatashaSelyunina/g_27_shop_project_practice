@@ -14,7 +14,7 @@ public class AspectLogging {
             "JpaProductService.getAllActiveProducts(..))")
     public void getProducts() {}
 
-    @Before("getProduct()")
+    @Before("getProducts()")
     public void beforeGetProduct(JoinPoint joinPoint) {
         logger.info("Вызван метод getAllActiveProducts");
     }
