@@ -30,12 +30,17 @@ public class Task {
         return description;
     }
 
+    public Timestamp getExecutedAt() {
+        return executedAt;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return id == task.id && Objects.equals(description, task.description) && Objects.equals(executedAt, task.executedAt);
+        return id == task.id && Objects.equals(description, task.description)
+                && Objects.equals(executedAt, task.executedAt);
     }
 
     @Override

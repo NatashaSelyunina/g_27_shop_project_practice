@@ -1171,3 +1171,35 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 2024-02-26T17:07:15.006+03:00  INFO 12588 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-26T17:07:15.009+03:00  INFO 12588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-02-26T17:07:15.018+03:00  INFO 12588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-26T18:44:52.702+03:00  INFO 15180 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Starting G27ShopProjectPracticeApplication using Java 21.0.2 with PID 15180 (C:\Users\Natasha\Downloads\g_27_shop_project_practice\target\classes started by Natasha in C:\Users\Natasha\Downloads\g_27_shop_project_practice)
+2024-02-26T18:44:52.705+03:00  INFO 15180 --- [main] d.a.g.G27ShopProjectPracticeApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-26T18:44:53.603+03:00  INFO 15180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T18:44:53.680+03:00  INFO 15180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2024-02-26T18:44:54.713+03:00  INFO 15180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-26T18:44:54.734+03:00  INFO 15180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-26T18:44:54.735+03:00  INFO 15180 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-26T18:44:54.892+03:00  INFO 15180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-26T18:44:54.893+03:00  INFO 15180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2125 ms
+2024-02-26T18:44:55.236+03:00  INFO 15180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26T18:44:55.305+03:00  INFO 15180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-26T18:44:55.308+03:00  INFO 15180 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-26T18:44:55.631+03:00  INFO 15180 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26T18:44:55.663+03:00  INFO 15180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-26T18:44:56.043+03:00  INFO 15180 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15f2a43f
+2024-02-26T18:44:56.045+03:00  INFO 15180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-26T18:44:56.935+03:00  INFO 15180 --- [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: de.aittr.g_27_shop_project_practice.domain.jpa.JpaCustomer (class must be instantiated by Interceptor)
+2024-02-26T18:44:57.121+03:00  INFO 15180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-26T18:44:57.124+03:00  INFO 15180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T18:44:58.071+03:00  INFO 15180 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-26T18:44:58.273+03:00  WARN 15180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26T18:44:59.138+03:00  INFO 15180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-26T18:44:59.152+03:00  INFO 15180 --- [main] d.a.g.G27ShopProjectPracticeApplication  : Started G27ShopProjectPracticeApplication in 6.961 seconds (process running for 7.388)
+2024-02-26T18:44:59.161+03:00  INFO 15180 --- [task-1] d.a.g.logging.AspectLogging              : Вызван метод getLastFiveTask класса TaskService с параметрами[]
+2024-02-26T18:44:59.332+03:00  INFO 15180 --- [task-1] d.a.g.logging.AspectLogging              : Метод getLastFiveTask класса TaskService успешно вернул результат - объект [Task{id=257, description='Cron expression task', executedAt=2024-02-16 13:26:10.003}, Task{id=256, description='Cron expression task', executedAt=2024-02-16 13:26:09.01}, Task{id=255, description='Cron expression task', executedAt=2024-02-16 13:26:08.001}, Task{id=254, description='Cron expression task', executedAt=2024-02-16 13:26:07.007}, Task{id=253, description='Cron expression task', executedAt=2024-02-16 13:26:06.014}]
+2024-02-26T18:44:59.333+03:00  INFO 15180 --- [task-1] d.a.g.logging.AspectLogging              : Метод getLastFiveTask класса TaskService завершил работу
+2024-02-26T18:45:29.159+03:00  INFO 15180 --- [task-2] d.a.g.logging.AspectLogging              : Вызван метод getLastFiveTask класса TaskService с параметрами[]
+2024-02-26T18:45:29.168+03:00  INFO 15180 --- [task-2] d.a.g.logging.AspectLogging              : Метод getLastFiveTask класса TaskService успешно вернул результат - объект [Task{id=257, description='Cron expression task', executedAt=2024-02-16 13:26:10.003}, Task{id=256, description='Cron expression task', executedAt=2024-02-16 13:26:09.01}, Task{id=255, description='Cron expression task', executedAt=2024-02-16 13:26:08.001}, Task{id=254, description='Cron expression task', executedAt=2024-02-16 13:26:07.007}, Task{id=253, description='Cron expression task', executedAt=2024-02-16 13:26:06.014}]
+2024-02-26T18:45:29.168+03:00  INFO 15180 --- [task-2] d.a.g.logging.AspectLogging              : Метод getLastFiveTask класса TaskService завершил работу
+2024-02-26T18:45:45.824+03:00  INFO 15180 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T18:45:45.828+03:00  INFO 15180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-26T18:45:45.846+03:00  INFO 15180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

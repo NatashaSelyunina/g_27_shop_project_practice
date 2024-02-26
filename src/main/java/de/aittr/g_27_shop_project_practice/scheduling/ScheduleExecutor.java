@@ -1,13 +1,17 @@
 package de.aittr.g_27_shop_project_practice.scheduling;
 
+import de.aittr.g_27_shop_project_practice.domain.jpa.Task;
 import de.aittr.g_27_shop_project_practice.services.jpa.TaskService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
+import java.util.List;
 
 @Component
 @EnableScheduling
@@ -126,4 +130,15 @@ public class ScheduleExecutor {
 //        scheduler.schedule(() -> logger.info(task.getDescription()),
 //                instant);
 //    }
+
+    @Scheduled(fixedRate = 30000)
+    @Async
+    public void scheduleLastFiveTask() {
+        List<Task> tasks = taskService.getLastFiveTask();
+        System.out.println("Последние пять задач:");
+        for (Task task : tasks) {
+            System.out.println(String.format("Задача '%s', время выполнения - %s",
+                    task.getDescription(), task.getExecutedAt()));
+        }
+    }
 }

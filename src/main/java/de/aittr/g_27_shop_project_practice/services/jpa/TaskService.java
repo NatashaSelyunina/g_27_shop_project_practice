@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaskService {
     private TaskRepository repository;
@@ -19,5 +21,9 @@ public class TaskService {
         Task task = new Task(description);
         logger.info(description);
         repository.save(task);
+    }
+
+    public List<Task> getLastFiveTask() {
+        return repository.getLastFiveTask();
     }
 }
